@@ -27,6 +27,11 @@ class Artifacts:
     def frame(self, split: str, kind: str = "raw") -> pl.DataFrame:
         return self.encoded[split][kind]
 
+    def intervenable_map(self) -> dict[str, bool]:
+        """field -> intervenable flag from the data dictionary (False == structural)."""
+        return {r["field"]: bool(r["intervenable"])
+                for r in self.data_dictionary.iter_rows(named=True)}
+
 
 def load_artifacts(
     data_dir: str | Path = "data",
