@@ -18,6 +18,12 @@ artifacts/ground_truth/
 artifacts/runs/
 artifacts/
 
+# Unzipped raw CSVs (reproducible from dataset/dataset-compressed.zip)
+data/
+
+# Generated observability reports (reproducible from `python run_observability.py`)
+report/
+
 # OS
 .DS_Store
 

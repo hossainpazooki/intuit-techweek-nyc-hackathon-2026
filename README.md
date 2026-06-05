@@ -36,6 +36,13 @@ Everything is in this folder. Start with the dataset guide:
 | `validate_submission.py` | Run this on your submission before uploading. |
 | `requirements.txt` | The (minimal) Python deps to read data + validate. |
 
+> **Optional tooling — data observability & exploration.** A leakage-safe
+> preprocessing pipeline (`preprocess.py`), an automated integrity/quality/drift
+> check suite (`run_observability.py`), and an interactive dataset explorer
+> (`streamlit run explore/app.py`) ship alongside the challenge. They help you
+> *see* the data and prove the pipeline is sound — but they build none of the
+> models. See [`OBSERVABILITY.md`](OBSERVABILITY.md). (`pip install -r requirements-obs.txt`)
+
 ## The four deliverables
 
 You submit **exactly four files**, with **exactly these names**. Scoring is
